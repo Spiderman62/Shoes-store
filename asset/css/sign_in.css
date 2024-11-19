@@ -1,0 +1,189 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+input:-webkit-autofill {
+	box-shadow: 0 0 0 50px white inset;
+  }
+
+html {
+	font-size: 62.5%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+	height: 100vh;
+	background: #355C7D;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	display: grid;
+	place-items: center;
+}
+.wrapper{
+	position: relative;
+	width: 750px;
+	/* height: 450px; */
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 8px;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	overflow: hidden;
+	transition: .3s ease-in-out;
+	animation: move_up .8s cubic-bezier( 0.215, 0.61, 0.355, 1 );
+}
+@keyframes move_up{
+	0%{
+		transform: translate3d(0,120px,0);
+		opacity: 0;
+	}
+	100%{
+		transform: translate3d(0,0px,0);
+		opacity: 1;
+	}
+}
+.form{
+	padding: 40px;
+}
+.form h2{
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+.form.sign_in .input-box{
+	width: 100%;
+	margin: 40px 0;
+	height: 40px;
+	border-bottom: 1px solid black;
+	position: relative;
+}
+.form.sign_in .input-box label{
+	font-size: 1.7rem;
+	position: absolute;
+	top: -15px;
+	left: -25px;
+}
+.form.sign_in .input-box input{
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	font-size: 1.8rem;
+	padding: 0 30px 0 5px;
+}
+
+.form.sign_in .btn{
+	margin: 0 auto;
+	display: block;
+	height: 40px;
+	width: 100px;
+	background-color: #355C7D;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+}
+.form.sign_in .btn:hover{
+	background-color: #6C5B7B;
+}
+.overlay{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	left: 50%;
+	transition: 1s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
+.overlay img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: .3s ease-in-out;
+
+}
+
+.form.sign_in .forgot span{
+	
+	cursor: pointer;
+	
+}
+.form.sign_in .input-box.error{
+	border-bottom: 1px solid red;
+}
+.form.sign_in .input-box.error .error_message{
+	font-size: 1.6rem;
+    color: red;
+	margin-top: 8px;
+}
+.form.sign_in .btn.btn_sign .dots{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.form.sign_in .btn.btn_sign .dots.visible{
+	display: flex;
+} 
+
+.btn.btn_sign .dots .dot{
+	width: 6px;
+	height: 6px;
+	background-color: white;
+	border-radius: 50%;
+	margin: 0 5px;
+	animation: loading_sign_in 2s infinite alternate;
+}
+.btn.btn_sign .dots .dot:first-child{
+	animation-delay: .3s;
+}
+.btn.btn_sign .dots .dot:nth-child(2){
+	animation-delay: .7s;
+}
+@keyframes loading_sign_in{
+	0%{
+		transform: scale(.7);
+		opacity: 0;
+	}
+	50%,70%{
+		transform: scale(1);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(.7);
+		opacity: 0;
+	}
+}
+.wrapper_forgot{
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+	justify-content: space-between;
+}
+.wrapper_forgot .aline{
+	background-color: #355C7D;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	color: white;
+	font-size: 1.5rem;
+	width: 130px;
+	padding: 10px 10px;
+	transition: .3s ease-in-out;
+	&:hover{
+		background-color: #6C5B7B;
+	}
+}
+
+.wrapper_forgot .forgot_password a{
+	color: white;
+	text-decoration: none;
+}

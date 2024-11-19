@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	font-family: "Spectral", serif;
+}
+
+
+
+.manager_user {
+	position: absolute;
+	background-color: rgb(255, 255, 255);
+	width: 1400px;
+	height: 500px;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 8px;
+	box-shadow: 0 0 20px 2px rgba(149, 147, 147, 0.607);
+	overflow: hidden;
+}
+
+.manager_user .column {
+	display: grid;
+	height: 80px;
+	grid-template-columns: 120px 10px repeat(2, 170px) 200px 150px repeat(2, 120px) 220px repeat(2, 50px);
+
+	box-shadow: 0 3px 13px -3px rgb(177, 177, 177);
+}
+
+.manager_user .column p {
+	display: grid;
+	place-items: center;
+	font-size: 1.6rem;
+	font-weight: 600;
+}
+
+.manager_user .component {
+	display: grid;
+	height: 80px;
+	grid-template-columns: 120px 50px repeat(2, 170px) 200px 150px repeat(2, 120px) 150px repeat(2, 50px);
+	border-bottom: 1px solid gray;
+}
+
+.manager_user .component p {
+	/* display: grid; */
+	vertical-align: center;
+	transform: translate(0, 37%);
+	font-size: 1.6rem;
+	width: 150px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.manager_user .component input {
+	transform: scale(0.2);
+	accent-color: #2980b9;
+	cursor: pointer;
+}
+
+.container {
+	overflow: auto;
+	height: 100%;
+	padding-bottom: 80px;
+}
+
+.container::-webkit-scrollbar {
+	display: none;
+}
+
+.edit a {
+	color: #1DBA53;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+
+	&:hover {
+		text-shadow: 1px 1px 22px #1DBA53;
+	}
+}
+
+.delete a {
+	color: #D44A4A;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+
+	&:hover {
+		text-shadow: 1px 1px 22px #D44A4A;
+	}
+}
+
+
+
+
+
+.select-all input{
+	transform: scale(1.5);
+	accent-color: #2980b9;
+	cursor: pointer;
+}
+.wrapper-checkbox{
+	background-color: white;
+	padding: 20px;
+	width: 350px;
+	border-radius: 4px;
+	position: absolute;
+	top: 14%;
+	left: 4.2%;
+}
+.wrapper-checkbox label{
+	font-size: 1.8rem;
+}
+.wrapper-checkbox select{
+	outline: none;
+	padding: 4px;
+}
+.wrapper-checkbox p{
+	display: inline-block;
+	margin-left: 20px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	font-size: 1.8rem;
+	background-color: rgb(43,83,114);
+	padding: 4px 6px;
+	border-radius: 4px;
+	color: white;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+	&:hover{
+		background-color: rgb(42,117,167);
+	}
+}

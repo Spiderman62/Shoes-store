@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: "Spectral", serif;
+}
+
+
+
+.manager_user {
+	position: absolute;
+	background-color: rgb(255, 255, 255);
+	width: 1500px;
+	height: 500px;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 8px;
+	box-shadow: 0 0 20px 2px rgba(149, 147, 147, 0.607);
+	overflow: hidden;
+}
+
+.manager_user .column {
+	display: grid;
+	height: 80px;
+	grid-template-columns: 90px 90px 100px 250px 120px 250px 100px 150px 150px repeat(2,1fr);
+
+
+	box-shadow: 0 3px 13px -3px rgb(177, 177, 177);
+}
+
+.manager_user .column p {
+	display: grid;
+	place-items: center;
+	font-size: 1.6rem;
+	font-weight: 600;
+}
+.manager_user .component{
+	display: grid;
+	height: 80px;
+	grid-template-columns: 90px 90px 100px 250px 120px 250px 100px 150px 150px repeat(2,1fr);
+	border-bottom: 1px solid gray;
+}
+.manager_user .component p{
+	display: grid;
+	place-items: center;
+	font-size: 1.6rem;
+
+}
+
+.container{
+	overflow: auto;
+	height: 100%;
+	padding-bottom: 80px;
+}
+.container::-webkit-scrollbar{
+	display: none;
+}
+.edit a{
+	color: #1DBA53;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+	&:hover{
+		text-shadow: 1px 1px 22px #1DBA53 ;
+	}
+}
+.delete a{
+	color: #D44A4A;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+	&:hover{
+		text-shadow: 1px 1px 22px #D44A4A ;
+	}
+}
+
+.add_product{
+	position: relative;
+	text-decoration: none;
+	color: white;
+	font-size: 2.5rem;
+	text-align: center;
+	left: 80%;
+	top: 5%;
+	transition: .3s ease-in-out;
+	
+}
+.add_product::after{
+	position: absolute;
+	content: "";
+	top: calc(100% + 1px);
+	left: 0;
+	width: 100%;
+	height: 1.5px;
+	background-color: white;
+	transform: scale(0);
+	transition: .3s ease-in-out;
+	border-radius: 4px;
+}
+.add_product:hover::after{
+	transform: scale(1);
+}
+.wrapper_image{
+	height: 75px;
+	width: 75px;
+}
+.wrapper_image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+input[type='checkbox']{
+	transform: scale(1.3);
+	cursor: pointer;
+	accent-color: rgb(135,96,126);
+}
+.description{
+	text-align: justify;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 70px;
+}

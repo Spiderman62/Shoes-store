@@ -1,0 +1,117 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+html {
+	font-size: 62.5%;
+}
+
+main {
+	position: relative;
+	height: 100vh;
+	
+	background: #0f0c29;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+main .wrapper{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: white;
+	padding: 30px 50px;
+	border-radius: 4px;
+	width: 450px;
+}
+main .wrapper h1{
+	text-align: center;
+	font-size: 2.5rem;
+}
+form .input-box {
+	margin: 35px 0;
+	height: 40px;
+	width: 100%;
+	position: relative;
+}
+.input-box label {
+	position: absolute;
+	font-size: 1.8rem;
+	top: -30%;
+	left: -8%;
+}
+
+.input-box input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid black;
+	font-size: 1.9rem;
+	padding: 0 15px 0 5px;
+}
+.error_message {
+	font-size: 1.6rem;
+	margin-top: 3px;
+	display: block;
+}
+
+.input-box.error {
+	border-bottom: 1px solid red;
+}
+
+.input-box.error .error_message {
+	color: red;
+
+}
+.input-box select{
+	padding: 4px 2px;
+	border-radius: 4px;
+	margin-top: 20px;
+}
+form .submit{
+	background-color: #6b6bbb;
+	border: none;
+	outline: none;
+	padding: 4px 12px;
+	font-size: 2.0rem;
+	cursor: pointer;
+	border-radius: 4px;
+	color: white;
+	display: block;
+	margin: 0 auto;
+	transition: .3s ease-in-out;
+	&:hover{
+		background-color: #302b63;
+	}
+}
+.turn-back{
+	position: absolute;
+	text-decoration: none;
+	color: white;
+	font-size: 2.5rem;
+	transition: .3s ease-in-out;
+	top: 4%;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+.turn-back::after{
+	position: absolute;
+	content: "";
+	height: 2.4px;
+	width: 100%;
+	background-color: white;
+	top: 100%;
+	left: 0;
+	border-radius: 4px;
+	transform: scale(0);
+	transition: .3s ease-in-out;
+}
+.turn-back:hover::after{
+	transform: scale(1);
+}

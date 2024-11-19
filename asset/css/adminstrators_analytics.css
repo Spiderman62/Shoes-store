@@ -1,0 +1,76 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+.adminstrators_analytics{
+	position: absolute;
+	top: 53%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: rgb(27,35,46);
+	width: 1200px;
+	height: 650px;
+	border-radius: 19px;
+	padding: 20px 15px;
+	overflow: hidden;
+}
+.adminstrators_analytics .countAll{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	column-gap: 10px;
+}
+.adminstrators_analytics .countAll .item{
+	border-radius: 4px;
+	padding: 15px;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	height: 120px;
+	color: white;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.adminstrators_analytics .countAll .item .col-left{
+	display: grid;
+	grid-template-rows: auto;
+	font-size: 3.8rem;
+}
+.adminstrators_analytics .countAll .item .col-right{
+	display: grid;
+	place-items: start end ;
+	font-size: 5.0rem;
+}
+.adminstrators_analytics .chart{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 20px;
+	margin-top: 20px;
+	height: 100%;
+	overflow: auto;
+	height: 470px;
+}
+.adminstrators_analytics .chart::-webkit-scrollbar{
+	display: none;
+}
+.adminstrators_analytics .chart .charts-card{
+	background-color: white;
+	padding: 25px;
+	-webkit-column-break-inside:avoid;
+	border-radius: 5px;
+	box-shadow: 0 6px 7px -4px rgba(0,0,0,.2);
+	
+}
+.adminstrators_analytics .chart .charts-card .chart-title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgb(0, 0, 0);
+	font-size: 2.5rem;
+	font-weight: 500;
+	margin: 20px 0;
+}
+.adminstrators_analytics .chart .charts-card #bar-chart{
+	font-size: 3.0rem;
+}
