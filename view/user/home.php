@@ -448,7 +448,7 @@
 <div class="fake_loading">
 		<svg viewBox="0 0 500 200">
 			<text x="50%" y="50%" text-anchor="middle" class="text-loader">
-				AZT EnderIO.
+				Lam Hoang.
 			</text>
 		</svg>
 	</div>
